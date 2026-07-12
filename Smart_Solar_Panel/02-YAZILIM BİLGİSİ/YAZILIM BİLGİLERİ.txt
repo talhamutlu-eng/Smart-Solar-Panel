@@ -1,0 +1,21 @@
+YAZILIM BÝLGÝLERÝ
+Geliþtirme Ortamý (IDE): Arduino IDE
+IDE Versiyonu:2.3.9
+Kodlama Dili:C/C++ (Arduino Sketch)
+
+KULLANILAN DIÞ KÜTÜPHANELER VE VERSÝYONLARI
+Adafruit INA219 Kütüphanesi – Akým ve gerilim okumak için
+LiquidCrystal_I2C Kütüphanesi  - LCD Ekran sürücüsü için
+WiFi.h – Kablosuz að baðlantýsý için
+Wire.h – I2C haberleþme protokolü için
+
+YAZILIMIN TEMEL ÇALIÞMA MANTIÐI VE ALGORÝTMASI 
+ 1. Sistem enerjilendiðinde `setup()` fonksiyonu ile I2C haberleþmesi, LCD ekran, INA219 sensörü ve WiFi baðlantýsý baþlatýlýr. 
+2. `loop()` fonksiyonu içerisinde INA219 sensöründen anlýk olarak güneþ panelinin ürettiði Voltaj (V) ve Akým (mA) verileri okunur. 
+3. Okunan veriler kullanýlarak anlýk Güç (W) hesabý matematiksel olarak (P = V * I) hesaplanýr. 
+4. Elde edilen voltaj, akým ve güç deðerleri anlýk olarak LCD ekran üzerinde (Türkçe karakter kurallarýna uygun olarak) listelenir. 
+5. Veriler ayný zamanda IoT izleme amacýyla belirlenen periyotlarla kablosuz að üzerinden sunucuya/arayüze aktarýlýr.
+
+
+KOD DOSYALARI HAKKINDA NOTLAR 
+ Ana kaynak kodu "03-PROJE KODU" klasörü içerisinde hem orijinal ".ino" (Arduino program dosyasý) formatýnda hem de kolay incelenebilmesi adýna ".txt" formatýnda sunulmuþtur. *Kod bloklarý içerisinde önemli satýrlar ve fonksiyonlar "//" þeklinde Türkçe açýklama satýrlarý ile detaylandýrýlmýþtýr.
